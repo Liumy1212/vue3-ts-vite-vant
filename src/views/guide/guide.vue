@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref,reactive } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { Toast } from 'vant';
+import { Button } from 'vant';
 
 const router = useRouter()
 const gotologin = () => {
