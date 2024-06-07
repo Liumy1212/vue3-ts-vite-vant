@@ -52,7 +52,7 @@
     height: 0.85rem;
     line-height: 0.85rem;
     display: inline-block;
-    background: linear-gradient(90deg, #FEA829, #FE8F27);
+    background: linear-gradient(90deg, #007bff, #007bff);
     border-radius: 1.5rem 1rem 1rem 1rem;
     font-size: 0.59rem;
     font-weight: normal;

@@ -159,8 +159,8 @@
     .admin-contract-popup button{
         width: 10.99rem;
         height: 1.92rem;
-        background: #FE9215;
-        border: 0px solid #FF6F00;
+        background: #007bff;
+        border: 0px solid #007bff;
         border-radius: 0.16rem;
         font-size: 0.85rem;
         line-height: 1.92rem;
@@ -180,10 +180,10 @@
         width: 8rem;
     }
     .home-contract-bottom div.orange i{
-        background: #FE9215;
+        background: #007bff;
     }
     .home-contract-bottom div.orange span{
-        color: #FE9215;
+        color: #007bff;
     }
     .home-contract-bottom div.red i{
         background: #FF0000;
@@ -208,7 +208,7 @@
     .home-contract-bottom button{
         width: 4rem;
         height: 1.39rem;
-        background: #FE9215;
+        background: #007bff;
         border-radius: 0.16rem;
         font-size: 0.69rem;
         line-height: 1.39rem;

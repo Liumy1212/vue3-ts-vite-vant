@@ -116,7 +116,7 @@ dl dt p{
 }
 .detail-btn button{
     height: 2.35rem;
-    background: #FE9215;
+    background: #007bff;
     border-radius: 0.27rem;
     font-size: 0.8rem;
     text-align: center;

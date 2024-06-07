@@ -19,10 +19,6 @@
 <template>
     <div class="admin-page">
         <van-nav-bar title="首页" />
-        <div class="admin-banner">
-            <img src="@/assets/img/admin/home/banner.png" />
-            <p>轻松管理项目进度，提高审核效率</p>
-        </div>
         <div class="admin-title">
             <h3>工作管理<i></i></h3>
         </div>

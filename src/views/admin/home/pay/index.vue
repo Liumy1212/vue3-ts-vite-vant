@@ -112,8 +112,8 @@
     .admin-contract-popup button{
         width: 10.99rem;
         height: 1.92rem;
-        background: #FE9215;
-        border: 0px solid #FF6F00;
+        background: #007bff;
+        border: 0px solid #007bff;
         border-radius: 0.16rem;
         font-size: 0.85rem;
         line-height: 1.92rem;
@@ -132,7 +132,7 @@
     .home-contract-bottom button{
         width: 4rem;
         height: 1.39rem;
-        background: #FE9215;
+        background: #007bff;
         border-radius: 0.16rem;
         font-size: 0.69rem;
         line-height: 1.39rem;
@@ -179,7 +179,7 @@
         font-size: 0.64rem;
         line-height: 0.64rem;
         font-weight: 400;
-        color: #FE9215;
+        color: #007bff;
         font-style: normal;
         float: right;
     }

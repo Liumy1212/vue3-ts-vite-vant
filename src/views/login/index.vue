@@ -140,8 +140,8 @@ const loginSubmit = async () => {
 .login-form-item span{
   font-size: 0.75rem;
   font-weight: 300;
-  color: #FE9527;
-  border-left: 1px solid #FE9527;
+  color: #007bff;
+  border-left: 1px solid #007bff;
   line-height: 0.75rem;
   padding-left: 0.56rem;
 }

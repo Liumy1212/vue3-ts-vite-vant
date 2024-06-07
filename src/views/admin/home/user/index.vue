@@ -178,7 +178,7 @@
         font-size: 0.64rem;
         line-height: 0.64rem;
         font-weight: 400;
-        color: #FE9215;
+        color: #007bff;
         float: right;
     }
     dt label{
@@ -203,7 +203,7 @@
         border: none;
         width: 4rem;
         height: 1.39rem;
-        background: #FE9215;
+        background: #007bff;
         border-radius: 0.16rem;
         font-size: 0.69rem;
         font-weight: 100;
