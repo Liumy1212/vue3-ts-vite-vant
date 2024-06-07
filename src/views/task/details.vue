@@ -65,6 +65,6 @@
     margin-right: 0.64rem;
 }
 .task-detail-footer .active >>> .van-icon-star-o:before{
-    color: #FE8F27;
+    color: #007bff;
 }
 </style>

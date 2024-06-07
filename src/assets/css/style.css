@@ -11,7 +11,7 @@ img{
 }
 a{
   text-decoration: none;
-  color: #fe9527;
+  color: #007bff;
 }
 body {
   color: #333333;
@@ -27,7 +27,7 @@ textarea{
   color: #333333;
 }
 .van-button--primary{
-  background: linear-gradient(90deg, #FEA829, #FE8F27);
+  background: linear-gradient(90deg, #007bff, #007bff);
   border-radius: 1.17rem;
   border: none;
   font-size: 0.96rem;

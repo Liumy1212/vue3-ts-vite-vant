@@ -39,12 +39,12 @@
     position: relative;
   }
   .contract-tab span.active{
-    color: #FF9415;
+    color: #007bff;
   }
   .contract-tab span.active i{
     width: 1.63rem;
     height: 0.05rem;
-    background: #FF9415;
+    background: #007bff;
     position: absolute;
     bottom: 0px;
     left: 50%;

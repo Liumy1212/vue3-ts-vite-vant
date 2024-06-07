@@ -98,7 +98,7 @@
       <input type="text" @click="gotoSearch" readonly placeholder="请输入想要搜素的内容" />
       <router-link to="/message/systemList" class="task-icon-message"></router-link>
     </div>
-    <Banner type="2"></Banner>
+    <!-- <Banner type="2"></Banner> -->
     <div class="task-title">
       <h3>最新任务</h3>
       <div class="task-positon-pop" @click="state.positionTypeBool = true">{{state.positionValue||'职位类型'}}<span></span></div>
