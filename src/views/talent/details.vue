@@ -64,26 +64,27 @@ import { Toast } from 'vant';
     <ProjectExperience :projectList="state.projectList"></ProjectExperience>
     <EduExperience :item="state.item"></EduExperience>
   </div>
-    <div class="task-detail-footer">
-        <van-action-bar-icon :class="state.status==1?'active':''" icon="star-o" text="收藏" @click="setCollection" />
-        <van-button type="primary" block @click="gotoMessage">立即沟通</van-button>
-    </div>
+  <div class="task-detail-footer">
+    <van-action-bar-icon :class="state.status==1?'active':''" icon="star-o" text="收藏" @click="setCollection" />
+    <van-button type="primary" block @click="gotoMessage">立即沟通</van-button>
+  </div>
 </template>
+
 <style scoped>
-  >>>.van-nav-bar__content{
-    background: #FF8E00;
+  >>>.van-nav-bar__content {
+    background: #007bff; /* 顶部颜色 */
   }
-  >>>.van-nav-bar__title,>>>.van-icon-arrow-left:before{
+  >>>.van-nav-bar__title, >>>.van-icon-arrow-left:before {
     color: #ffffff;
   }
-  .van-hairline--bottom:after{
+  .van-hairline--bottom:after {
     border: 0;
   }
-  .detail-page{
+  .detail-page {
     margin: 0.53rem;
     padding-bottom: 2rem;
   }
-.task-detail-footer{
+  .task-detail-footer {
     display: flex;
     position: fixed;
     left: 0;
@@ -92,11 +93,13 @@ import { Toast } from 'vant';
     background: #ffffff;
     bottom: 0;
     padding: 0.64rem 0;
-}
-.task-detail-footer button{
+  }
+  .task-detail-footer button {
     margin-right: 0.64rem;
-}
-.task-detail-footer .active >>> .van-icon-star-o:before{
+    background: #007bff; /* 按钮颜色 */
+    border-color: #007bff; /* 按钮边框颜色 */
+  }
+  .task-detail-footer .active >>> .van-icon-star-o:before {
     color: #FE8F27;
-}
+  }
 </style>

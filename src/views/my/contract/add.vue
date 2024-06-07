@@ -214,7 +214,7 @@
     transform: scale(0.8);
 }
 >>>.van-switch--on{
-    background: linear-gradient(90deg, #FEA829, #FE8F27);
+    background: linear-gradient(90deg, #007bff, #007bff);
 }
 .budget{
     position: relative;
@@ -248,7 +248,7 @@
 .wy-confirm-btn{
     height: 2.35rem;
     line-height: 2.35rem;
-    background: linear-gradient(90deg, #FEA829, #FE8F27);
+    background: linear-gradient(90deg, #007bff, #007bff);
     border-radius: 0.27rem;
     width: calc(100vw - 1.2rem);
     border: 0;

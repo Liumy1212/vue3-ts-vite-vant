@@ -104,6 +104,6 @@ dl dt i{
     background-size: 100%;
 }
 dl dt.active p{
-    color: #ff9415;
+    color: #007bff;
 }
 </style>

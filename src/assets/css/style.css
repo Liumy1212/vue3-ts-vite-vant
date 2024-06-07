@@ -42,8 +42,8 @@ textarea{
   line-height: 0.75rem;
 }
 .van-checkbox__icon--checked .van-icon{
-  background-color: #FE9527;
-  border-color: #FE9527;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 .van-loading{
   text-align: center;
@@ -156,7 +156,7 @@ textarea{
 }
 .wy-submit{
   height: 2.35rem;
-  background: linear-gradient(90deg, #FEA829, #FE8F27);
+  background: linear-gradient(90deg, #007bff, #007bff);
   border-radius: 0.27rem;
   margin: 0 0.64rem 0.64rem;
   position: fixed;

@@ -171,14 +171,6 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/my/task/details.vue')
     },
     {
-        path: '/my/coupon',
-        component: () => import('@/views/my/coupon/index.vue')
-    },
-    {
-        path: '/my/coupon/rule',
-        component: () => import('@/views/my/coupon/rule.vue')
-    },
-    {
         path: '/talent',
         component: () => import('@/views/talent/index.vue')
     },

@@ -13,7 +13,7 @@ const state = reactive({
   time: 60,
   interTimeCode: null
 })
-const onClickLeft = () => history.back()
+// const onClickLeft = () => history.back()
 const getCodeChange = async () => {
   if(state.interTimeCode) return;
   const res = await getCode({
@@ -72,7 +72,7 @@ const loginSubmit = async () => {
 
 <template>
   <div>
-    <van-icon class="icon-left" name="arrow-left" @click-left="onClickLeft" />
+    <!-- <van-icon class="icon-left" name="arrow-left" @click-left="onClickLeft" /> -->
     <div class="login-form">
       <h3>验证码登录</h3>
       <div class="login-form-item">

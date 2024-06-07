@@ -68,11 +68,7 @@
           <img src="@/assets/img/my/icon-contract-management.png" />
           <span>合约管理</span>
       </router-link>
-      <router-link to="/my/coupon">
-          <i>{{state.count.coupon_count}}</i>
-          <img src="@/assets/img/my/icon-experience-gold.png" />
-          <span>我的体验金</span>
-      </router-link>
+
     </div>
     <div class="my-contract" v-if="store.userInfo.role!=2">
         <div class="my-title">
@@ -107,11 +103,7 @@
             <label>企业认证</label>
             <span><van-icon name="arrow" /></span>
         </div>
-        <div class="my-item" @click="state.show = true">
-            <img src="@/assets/img/my/icon-account-manager.png" />
-            <label>专属客户经理</label>
-            <span><img src="@/assets/img/icon/icon-message.png" />无忧经理<van-icon name="arrow" /></span>
-        </div>
+
     </div>
     <div class="my-common" v-if="store.userInfo.role!=2">
         <div class="my-item" @click="gotoPage('/my/feedback')">
@@ -146,10 +138,7 @@
             <span class="col-9">当前为{{store.userInfo.role===1?'IT企业人才':store.userInfo.role===3?'企业端':'管理端'}}身份<van-icon name="arrow" /></span>
         </div>
     </div>
-    <!--弹窗-->
-    <van-popup v-model:show="state.show" duration="0" :style="{ width: '13.07rem',height: '15.44rem',borderRadius:'0.53rem' }">
-      <CustomerManager @back="state.show = false" :item="store.userInfo"></CustomerManager>
-    </van-popup>
+
   </div>
   <FooterTabbar></FooterTabbar>
 </template>
@@ -176,7 +165,7 @@
   }
   .my-page{
     padding: 0 0.77rem 3rem;
-    background: #FBFBFB url(@/assets/img/my/top-background.png) center -0.8rem no-repeat;
+    background: #5ad1ff;
     background-size: contain;
     height: calc(100vh - 3rem);
     overflow: auto;
@@ -286,7 +275,7 @@
     color: #FFFFFF;
     width: 0.85rem;
     height: 0.85rem;
-    background: #FC9215;
+    background: red;
     border: 1px solid #FFFFFF;
     border-radius: 50%;
     text-align: center;
