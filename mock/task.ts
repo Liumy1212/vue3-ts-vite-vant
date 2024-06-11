@@ -259,6 +259,31 @@ export default [
     },
   },
   {
+    url: "/api/course/TaskCollection",
+    method: "post",
+    response: ({ body }) => {
+      return {
+        "code": 200,
+        "success": "ok",
+        "result": {
+          "errCode": 200,
+          "msg": "已添加收藏",
+          "data": {
+            "fieldCount": 0,
+            "affectedRows": 1,
+            "insertId": 59,
+            "serverStatus": 2,
+            "warningCount": 0,
+            "message": "",
+            "protocol41": true,
+            "changedRows": 0,
+            "status": 1
+          }
+        }
+      }
+    }
+  },
+  {
     url: "/api/position/positionTypeApi",
     method: "get",
     response: ({ body }) => {
@@ -453,160 +478,170 @@ export default [
     method: "get",
     response: ({ body }) => {
       return {
-        code: 200,
-        success: "ok",
-        result: {
-          code: "200",
-          message: "加载成功",
-          data: {
-            taskCycle: ["7天", "15天", "30天", "60天", "90天"],
-            serviceMode: ["驻场", "远程", "全职"],
-            positionList: [
+        "code": 200,
+        "success": "ok",
+        "result": {
+          "code": "200",
+          "message": "加载成功",
+          "data": {
+            "taskCycle": [
+              "7天",
+              "15天",
+              "30天",
+              "60天",
+              "90天"
+            ],
+            "serviceMode": [
+              "驻场",
+              "远程",
+              "全职"
+            ],
+            "positionList": [
               [
                 {
-                  id: 14,
-                  pid: 0,
-                  position_name: "技术",
+                  "id": 14,
+                  "pid": 0,
+                  "position_name": "技术"
                 },
                 {
-                  id: 16,
-                  pid: 0,
-                  position_name: "市场",
+                  "id": 16,
+                  "pid": 0,
+                  "position_name": "市场"
                 },
                 {
-                  id: 17,
-                  pid: 0,
-                  position_name: "运营",
+                  "id": 17,
+                  "pid": 0,
+                  "position_name": "运营"
                 },
                 {
-                  id: 18,
-                  pid: 0,
-                  position_name: "产品设计",
+                  "id": 18,
+                  "pid": 0,
+                  "position_name": "产品设计"
                 },
                 {
-                  id: 19,
-                  pid: 0,
-                  position_name: "人力资源",
+                  "id": 19,
+                  "pid": 0,
+                  "position_name": "人力资源"
                 },
                 {
-                  id: 22,
-                  pid: 14,
-                  position_name: "前端开发",
+                  "id": 22,
+                  "pid": 14,
+                  "position_name": "前端开发"
                 },
                 {
-                  id: 25,
-                  pid: 14,
-                  position_name: "安卓开发",
+                  "id": 25,
+                  "pid": 14,
+                  "position_name": "安卓开发"
                 },
                 {
-                  id: 26,
-                  pid: 14,
-                  position_name: "ios开发",
+                  "id": 26,
+                  "pid": 14,
+                  "position_name": "ios开发"
                 },
                 {
-                  id: 27,
-                  pid: 14,
-                  position_name: "测试",
+                  "id": 27,
+                  "pid": 14,
+                  "position_name": "测试"
                 },
                 {
-                  id: 28,
-                  pid: 14,
-                  position_name: "运维/技术支持",
+                  "id": 28,
+                  "pid": 14,
+                  "position_name": "运维/技术支持"
                 },
                 {
-                  id: 29,
-                  pid: 14,
-                  position_name: "php开发",
+                  "id": 29,
+                  "pid": 14,
+                  "position_name": "php开发"
                 },
                 {
-                  id: 30,
-                  pid: 16,
-                  position_name: "市场调研",
+                  "id": 30,
+                  "pid": 16,
+                  "position_name": "市场调研"
                 },
                 {
-                  id: 31,
-                  pid: 16,
-                  position_name: "网络营销",
+                  "id": 31,
+                  "pid": 16,
+                  "position_name": "网络营销"
                 },
                 {
-                  id: 32,
-                  pid: 16,
-                  position_name: "活动策划",
+                  "id": 32,
+                  "pid": 16,
+                  "position_name": "活动策划"
                 },
                 {
-                  id: 33,
-                  pid: 16,
-                  position_name: "商务渠道",
+                  "id": 33,
+                  "pid": 16,
+                  "position_name": "商务渠道"
                 },
                 {
-                  id: 34,
-                  pid: 17,
-                  position_name: "内容运营",
+                  "id": 34,
+                  "pid": 17,
+                  "position_name": "内容运营"
                 },
                 {
-                  id: 35,
-                  pid: 17,
-                  position_name: "活动运营",
+                  "id": 35,
+                  "pid": 17,
+                  "position_name": "活动运营"
                 },
                 {
-                  id: 36,
-                  pid: 17,
-                  position_name: "新媒体运营",
+                  "id": 36,
+                  "pid": 17,
+                  "position_name": "新媒体运营"
                 },
                 {
-                  id: 37,
-                  pid: 17,
-                  position_name: "视频剪辑",
+                  "id": 37,
+                  "pid": 17,
+                  "position_name": "视频剪辑"
                 },
                 {
-                  id: 38,
-                  pid: 18,
-                  position_name: "UI设计师",
+                  "id": 38,
+                  "pid": 18,
+                  "position_name": "UI设计师"
                 },
                 {
-                  id: 39,
-                  pid: 18,
-                  position_name: "视觉设计师",
+                  "id": 39,
+                  "pid": 18,
+                  "position_name": "视觉设计师"
                 },
                 {
-                  id: 40,
-                  pid: 18,
-                  position_name: "产品经理",
+                  "id": 40,
+                  "pid": 18,
+                  "position_name": "产品经理"
                 },
                 {
-                  id: 41,
-                  pid: 18,
-                  position_name: "项目经理",
+                  "id": 41,
+                  "pid": 18,
+                  "position_name": "项目经理"
                 },
                 {
-                  id: 42,
-                  pid: 19,
-                  position_name: "人力资源主管",
+                  "id": 42,
+                  "pid": 19,
+                  "position_name": "人力资源主管"
                 },
                 {
-                  id: 43,
-                  pid: 19,
-                  position_name: "招聘",
+                  "id": 43,
+                  "pid": 19,
+                  "position_name": "招聘"
                 },
                 {
-                  id: 44,
-                  pid: 19,
-                  position_name: "HRBP",
+                  "id": 44,
+                  "pid": 19,
+                  "position_name": "HRBP"
                 },
                 {
-                  id: 45,
-                  pid: 19,
-                  position_name: "人事/HR",
+                  "id": 45,
+                  "pid": 19,
+                  "position_name": "人事/HR"
                 },
                 {
-                  id: 48,
-                  pid: 14,
-                  position_name: "java开发",
-                },
-              ],
-            ],
-          },
-        },
+                  "id": 48,
+                  "pid": 14,
+                  "position_name": "java开发"
+                }
+              ]
+            ]
+          }
+        }
       };
     },
   },
@@ -1350,4 +1385,15 @@ export default [
       };
     },
   },
+  {
+    url: "/api/task/onOrOff",
+    method: "put",
+    response: ({ body }) => {
+      return {
+        "code":200,
+        "success":"ok",
+        "result":{"errCode":200,"msg":"任务发布成功"}
+      };
+    },
+  }
 ] as MockMethod[];
