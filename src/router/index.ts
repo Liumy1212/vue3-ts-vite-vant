@@ -19,6 +19,17 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/login/privacyPolicy.vue')
     },
     {
+        path: '/login/loginAccount',
+        component: () => import('@/views/login/loginAccount.vue')
+    },
+    {
+        path: '/login/register',
+        component: () => import('@/views/login/register.vue')
+    },
+
+
+
+    {
         path: '/task',
         component: () => import('@/views/task/index.vue')
     },

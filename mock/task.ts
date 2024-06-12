@@ -1,5 +1,6 @@
 import { MockMethod } from "vite-plugin-mock";
 
+
 export default [
   {
     url: "/api/sys/city/list",
