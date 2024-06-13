@@ -6,18 +6,19 @@
     const { closeCitySwitch } = inject('popup')
     const store = taskStore()
     const leftBack = () => closeCitySwitch();
-    // const getCityList = async () => {
-    //     const res = await cityList()
-    //     if(res){
-    //         store.setCityList(res)
-    //     }else{
-    //         Toast(res.msg)
-    //     }
-    // }
+    const getCityList = async () => {
+        const res = await cityList()
+        if(res){
+            store.setCityList(res)
+        }else{
+            Toast(res.msg)
+        }
+    }
     if(store.cityList.length<=0) store.getCityList()
+
 </script>
 <template>
-    <van-nav-bar title="城市切换" left-arrow @click-left="leftBack"/>
+    <!-- <van-nav-bar title="城市切换" left-arrow @click-left="leftBack"/> -->
     <div class="city-switch">
         <h3>当前城市：</h3>
         <div class="city-switch-text">

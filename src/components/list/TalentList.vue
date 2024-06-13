@@ -27,7 +27,7 @@ const arrayList = (str) => {
   >
     <div class="talent-item-top">
       <div class="talent-item-pic">
-        <img :src="item.it_head" />
+        <img src="src\assets\img\icon\用户.svg"/>
       </div>
       <div class="talent-item-cont">
         <h3>
@@ -53,7 +53,7 @@ const arrayList = (str) => {
     </div>
     <div class="talent-item-bottom">
       <label>已做{{ item.project_count }}个项目</label>
-      <span><van-icon name="location-o" />{{ item.city }}</span>
+      <!-- <span><van-icon name="location-o" />{{ item.city }}</span> -->
     </div>
   </div>
 </template>

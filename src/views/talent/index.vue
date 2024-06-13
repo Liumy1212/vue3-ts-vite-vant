@@ -94,11 +94,11 @@
 <template>
   <div class="task-page">
     <div class="task-top">
-      <div class="task-top-city" @click="state.citySwitchBool = true">
+      <!-- <div class="task-top-city" @click="state.citySwitchBool = true">
         <i></i>
         <strong>{{store.cityValue}}</strong>
         <span></span>
-      </div>
+      </div> -->
       <input type="text" @click="gotoSearch" readonly placeholder="请输入想要搜素的内容" />
       <router-link to="/message/systemList" class="task-icon-message"></router-link>
     </div>

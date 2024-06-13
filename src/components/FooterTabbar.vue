@@ -64,43 +64,43 @@ dl dt i{
     margin: 0 auto;
 }
 .icon-task-bar i{
-    background: url('@/assets/img/icon/bar-task-link.png') no-repeat;
+    background: url('src/assets/img/icon/task.svg') no-repeat;
     background-size: 100%;
 }
 .icon-task-bar.active i{
-    background: url('@/assets/img/icon/bar-task-active.png') no-repeat;
+    background: url('src/assets/img/icon/task (1).svg') no-repeat;
     background-size: 100%;
 }
 .icon-talent-bar i{
-    background: url('@/assets/img/icon/bar-talent-link.png') no-repeat;
+    background: url('src/assets/img/icon/人才培养.svg') no-repeat;
     background-size: 100%;
 }
 .icon-talent-bar.active i{
-    background: url('@/assets/img/icon/bar-talent-active.png') no-repeat;
+    background: url('src/assets/img/icon/人才培养 (1).svg') no-repeat;
     background-size: 100%;
 }
 .icon-contract-bar i{
-    background: url('@/assets/img/icon/bar-contract-link.png') no-repeat;
+    background: url('src/assets/img/icon/contract.svg') no-repeat;
     background-size: 100%;
 }
 .icon-contract-bar.active i{
-    background: url('@/assets/img/icon/bar-contract-active.png') no-repeat;
+    background: url('src/assets/img/icon/contract (1).svg') no-repeat;
     background-size: 100%;
 }
 .icon-message-bar i{
-    background: url('@/assets/img/icon/bar-message-link.png') no-repeat;
+    background: url('src/assets/img/icon/message.svg') no-repeat;
     background-size: 100%;
 }
 .icon-message-bar.active i{
-    background: url('@/assets/img/icon/bar-message-active.png') no-repeat;
+    background: url('src/assets/img/icon/message (1).svg') no-repeat;
     background-size: 100%;
 }
 .icon-my-bar i{
-    background: url('@/assets/img/icon/bar-my-link.png') no-repeat;
+    background: url('src/assets/img/icon/彩友多_我的-个人主页.svg') no-repeat;
     background-size: 100%;
 }
 .icon-my-bar.active i{
-    background: url('@/assets/img/icon/bar-my-active.png') no-repeat;
+    background: url('src/assets/img/icon/彩友多_我的-个人主页 (1).svg') no-repeat;
     background-size: 100%;
 }
 dl dt.active p{
