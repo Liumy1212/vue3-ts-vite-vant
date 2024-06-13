@@ -4,9 +4,11 @@
   import {userStore} from '@/store/user'
   import {addRole} from '@/api/my'
   import {Toast} from 'vant'
+  import { useRouter } from 'vue-router';
   import IdentityPopup from './IdentityPopup.vue'
   const store = myStore()
   const uStore = userStore()
+  const router = useRouter()
   if(Object.keys(store.userInfo).length === 0) store.getUserInfo()
   const state = reactive({
     show: false,
@@ -14,28 +16,24 @@
     switchRole: store.userInfo.role
   })
   const setRole = async (role) => {
+    
     if(state.role === role) return
-    let bool = false
-    if(role === 1 && store.userInfo.it_enterprise === 1){
-        bool = true
-    }
-    if(role === 2 && store.userInfo.manage === 1){
-        bool = true
-    }
-    if(role === 3 && store.userInfo.enterprise === 1){
-        bool = true
-    }
-    if(bool){
-        const res = await addRole({
-            "role": role
-        })
-        if(res){
-            Toast('身份切换成功')
-            store.getUserInfo()
-            state.role = role
-            uStore.setRole(role)
-            localStorage.setItem('role',role)
-        }
+
+    if(state.role != role){
+
+        Toast('身份切换成功')
+        console.log(role)
+        // store.getUserInfo()
+        // store.setUserInfoRole(role)
+        store.userInfo.role = role
+        if(role === 1)  store.userInfo.it_enterprise = 1;
+        else if (role === 2) store.userInfo.manage = 1
+        else if (role === 3) store.userInfo.enterprise = 1
+        state.role = role
+        uStore.setRole(role)
+        localStorage.setItem('role',role)
+        router.push('/my/user/identitySwitch')
+        
     }else{
         state.switchRole = role
         state.show = true
@@ -48,7 +46,6 @@
         <img src="@/assets/img/my/icon-personnel.png" />
         <div>
             <h5>IT企业人才</h5>
-            <p v-if="store.userInfo.it_enterprise !==1">未申请</p>
         </div>
     </div>
     <img class="item-back" src="@/assets/img/my/personnel-bg.png" />
@@ -59,7 +56,6 @@
         <img src="@/assets/img/my/icon-controller.png" />
         <div>
             <h5>管理端</h5>
-            <p v-if="store.userInfo.manage !==1">未申请</p>
         </div>
     </div>
     <img class="item-back" src="@/assets/img/my/controller-bg.png" />
@@ -76,10 +72,10 @@
     <img class="item-back" src="@/assets/img/my/enterprise-bg.png" />
     <strong v-if="store.userInfo.role === 3">当前身份</strong>
   </div>
-    <!--弹窗-->
+    <!-- 弹窗
     <van-popup v-model:show="state.show" duration="0" :style="{ width: '13.07rem',height: '15.44rem',borderRadius:'0.53rem' }">
       <IdentityPopup @back="state.show = false" :role="state.switchRole"></IdentityPopup>
-    </van-popup>
+    </van-popup> -->
 </template>
 <style scoped>
   .switch-item{

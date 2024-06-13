@@ -22,6 +22,10 @@ export const myStore = defineStore({
                 this.userInfo = res
             }
         },
+        setUserInfoRole(role: any){
+            this.userInfo.role = role
+        }
+        ,
         async getResumeDetail(){
             if(Object.keys({}).length === 0) await this.getUserInfo()
             const res = await resumeDetail(this.userInfo)

@@ -11,7 +11,7 @@
 <template>
   <div class="account-info">
     <p>
-        <label>账户余额（无忧币）<van-icon @click="gotoPage('/my/account/coinExplain')" name="question-o" /></label>
+        <label>账户余额（狗狗币）<van-icon @click="gotoPage('/my/account/coinExplain')" name="question-o" /></label>
         <span @click="gotoPage('/my/account/advance')">提现<van-icon name="arrow" /></span>
     </p>
     <h3>{{store.userInfo.account_price && store.userInfo.account_price.toFixed(2)}}</h3>
