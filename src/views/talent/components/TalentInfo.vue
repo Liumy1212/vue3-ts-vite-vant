@@ -15,7 +15,7 @@
 <template>
   <div class="talent-info">
     <div class="info-left">
-        <img :src="item.it_head" />
+        <img src="src\assets\img\icon\头像.svg" />
         <span>精选人才</span>
     </div>
     <div class="info-right">

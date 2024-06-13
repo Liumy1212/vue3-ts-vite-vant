@@ -31,8 +31,8 @@
 <template>
     <dl v-for="(item,index) in messageList" :key="index" @click="gotoDetail(item)">
         <dd>
-            <img v-if="item.receive_is_read" :src="item.receive_is_read">
-            <img v-else src="@/assets/img/icon/icon-message.png">
+            
+            <img src="src\assets\img\icon\头像.svg" alt="">
             <span v-if="item.is_show"></span>
         </dd>
         <dt>

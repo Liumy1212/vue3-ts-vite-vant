@@ -10,7 +10,7 @@
   store.getChatMessageList()
 </script>
 <template>
-  <MessageList :messageList="store.systemNewMessage" type="system"></MessageList>
+  <!-- <MessageList :messageList="store.systemNewMessage" type="system"></MessageList> -->
   <MessageList :messageList="store.messageList" :type="uStore.role == 1?'talk':'talent'"></MessageList>
   <FooterTabbar></FooterTabbar>
 </template>

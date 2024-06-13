@@ -22,7 +22,7 @@
     <div class="talent-item" v-for="(item, index) in talentList" :key="index" @click="gotoDetail(item.resume_id || item.id)">
         <div class="talent-item-top">
             <div class="talent-item-pic">
-                <img :src="item.it_head" />
+                <img src="src\assets\img\icon\头像.svg"/>
             </div>
             <div class="talent-item-cont">
                 <h3>{{ item.user_name }}
