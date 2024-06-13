@@ -36,46 +36,21 @@ const getCodeChange = async () => {
   }
 }
 
+
+
+
 const router = useRouter()
-const loginSubmit = async () => {
-  if(!state.code) {
-    Toast('请输入验证码')
-    return
-  }
-  if(!state.checked){
-    Toast('请勾选我已阅读')
-    return
-  }
-  const res = await login({
-    accounts: state.accounts,
-    code: state.code
-  })
-  if(res.errCode === 200){
-    // 登录成功后需要把登录返回的数据存到store
-    store.setUserInfo(res.data)
-    // 进入人才端
-    if(store.role == 1){
-      router.push('/task')
-    }
-    // 进入管理端
-    if(store.role == 2){
-      router.push('/admin/home')
-    }
-    // 进入企业端
-    if(store.role == 3){
-      router.push('/talent')
-    }
-  }else{
-    Toast(res.msg)
-  }
+const registerSubmit = async () => {
+   router.push('/login')
 }
 
+
 const pushToLogin = () => {
-  router.push("/login/loginAccount")
+  router.push("/login")
 }
 
 const pushToRegister = () => {
-  router.push("/login/register")
+  router.push("/login/loginAccount")
 }
 </script>
 
@@ -83,17 +58,26 @@ const pushToRegister = () => {
   <div>
     <!-- <van-icon class="icon-left" name="arrow-left" @click-left="onClickLeft" /> -->
     <div class="login-form">
-      <h3>手机号登录</h3>
+      <h3>账号注册</h3>
       <div class="login-form-item">
         <i class="icon-phone"></i>
         <input placeholder="请输入手机号" v-model="state.accounts" type="text" />
+      </div>
+      <div class="login-form-item">
+        <i class="icon-phone"></i>
+        <input placeholder="请输入账号"  type="text" />
+      </div>
+      <div class="login-form-item">
+        <i class="icon-phone"></i>
+        <input placeholder="请输入密码"  type="text" />
       </div>
       <div class="login-form-item">
         <i class="icon-code"></i>
         <input placeholder="请输入验证码" v-model="state.code" type="text" />
         <span @click="getCodeChange">{{state.codeText}}</span>
       </div>
-      <van-button type="primary" block @click="loginSubmit">登录</van-button>
+
+      <van-button type="primary" block @click="registerSubmit">注册</van-button>
       <div class="login-form-label">
         <van-checkbox v-model="state.checked">我已阅读</van-checkbox>
         <router-link to="/login/serviceAgree">《IT企业平台服务协议》</router-link>和
@@ -101,16 +85,15 @@ const pushToRegister = () => {
       </div>
     </div>
 
-
     <div class="login-method-change">
       <div>
         <button class="login-account" @click="pushToLogin">
           <i class="icon-account"></i>
-          <span>账号登录</span>
+          <span>手机号登录</span>
         </button>
         <button class="login-register" @click="pushToRegister">
           <i class="icon-register"></i>
-          <span>注册</span>
+          <span>账号登录</span>
         </button>        
       </div>
     </div>

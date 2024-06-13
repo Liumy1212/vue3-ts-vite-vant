@@ -9,12 +9,12 @@ const state = reactive({
   checked: true,
   accounts: '',
   code: '',
-  codeText: '获取验证码',
   time: 60,
   interTimeCode: null
 })
 // const onClickLeft = () => history.back()
 const getCodeChange = async () => {
+  state.accounts = '18172946378'
   if(state.interTimeCode) return;
   const res = await getCode({
     accounts: state.accounts
@@ -26,12 +26,9 @@ const getCodeChange = async () => {
       if(state.time<=0){
         clearInterval(state.interTimeCode)
         state.time = 60
-        state.codeText = '获取验证码'
-      }else{
-        state.codeText = '重新发送('+state.time+'s)'
       }
     },1000)
-    // 手机接收码采用接口返回
+
     state.code = res.code
   }
 }
@@ -71,7 +68,7 @@ const loginSubmit = async () => {
 }
 
 const pushToLogin = () => {
-  router.push("/login/loginAccount")
+  router.push("/login")
 }
 
 const pushToRegister = () => {
@@ -83,15 +80,14 @@ const pushToRegister = () => {
   <div>
     <!-- <van-icon class="icon-left" name="arrow-left" @click-left="onClickLeft" /> -->
     <div class="login-form">
-      <h3>手机号登录</h3>
+      <h3>账号登录</h3>
       <div class="login-form-item">
         <i class="icon-phone"></i>
-        <input placeholder="请输入手机号" v-model="state.accounts" type="text" />
+        <input placeholder="请输入账号"  type="text" />
       </div>
       <div class="login-form-item">
         <i class="icon-code"></i>
-        <input placeholder="请输入验证码" v-model="state.code" type="text" />
-        <span @click="getCodeChange">{{state.codeText}}</span>
+        <input placeholder="请输入密码"  type="password" @blur="getCodeChange"/>
       </div>
       <van-button type="primary" block @click="loginSubmit">登录</van-button>
       <div class="login-form-label">
@@ -101,12 +97,11 @@ const pushToRegister = () => {
       </div>
     </div>
 
-
     <div class="login-method-change">
       <div>
         <button class="login-account" @click="pushToLogin">
           <i class="icon-account"></i>
-          <span>账号登录</span>
+          <span>手机号登录</span>
         </button>
         <button class="login-register" @click="pushToRegister">
           <i class="icon-register"></i>
@@ -178,7 +173,6 @@ const pushToRegister = () => {
   width: 100%;
 }
 
-
 >>> .van-button--primary{
   width: 10rem;
   padding: 1.25rem 1rem;
@@ -245,4 +239,5 @@ const pushToRegister = () => {
 .icon-register {
   background: url('@/assets/img/icon/icon-register.png') no-repeat;
 }
+
 </style>
